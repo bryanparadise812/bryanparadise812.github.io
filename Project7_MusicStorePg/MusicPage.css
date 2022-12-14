@@ -1,0 +1,41 @@
+/* Styling the body */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling the background image by
+giving its url and position */
+.container {
+    height: 400px;
+    width: 40%;
+    background-color: white;
+    position: relative;
+    display: flex-start;
+    align-items:center
+}
+
+
+/* Styling the list tags to the
+right of the navigation bar */
+.nav li {
+    float: left;
+    list-style: none;
+    display: flex-start;
+}
+
+/* Styling the anchor tags of
+the navigation bar */
+.nav a {
+    list-style: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1rem;
+    font-weight: 550;
+    display: flex-start;
+    padding: 5px 35px;
+    color: black;
+    text-decoration: none;
+}
+
+

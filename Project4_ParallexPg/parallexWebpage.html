@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Parallex Webpage</title>
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <style>
+  
+        /* Styling the body */
+        * {
+            margin-top: 0px;
+            padding: 0px;
+            
+        }
+  
+        /* Styling the first parallax's 
+        height, width and background color */
+        .parallax-1 {
+            width: 100%;
+            height: 1400px;
+            background-image: url(Images/EpcotBalll.jpeg);
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+        .overlay {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0, 0.9);
+            overflow-x: hidden;
+            transition: 1s;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: khaki;
+            display: block;
+            transition: 0.3s;
+        }       
+
+        .overlay a:hover, .overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }               
+
+        @media screen and (max-height: 450px) {
+            .overlay a {font-size: 20px}
+            .overlay .closebtn {
+            font-size: 40px;
+            top: 15px;
+            right: 35px;
+        }
+        }
+
+        .nav_ul {
+            font-family: 'Courgette', cursive;
+            background-color:black;
+            text-align: center;
+            overflow: hidden;
+            list-style-type: none;
+            margin: 0px;
+            padding:0px;
+        }
+
+        .navBar li{
+            color: black;
+            display: inline-block;
+        }
+
+        .navBar li a{
+            display: block;
+            color: whitesmoke;
+            text-align: center;
+            padding: 25px 70px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: 2s ease;
+            font-size: 20px;
+
+        }
+
+        .navBar li a:hover{
+            background-color:khaki;
+            transform: translateY(-0.25em);
+        }
+
+
+  
+        /* Styling the title of first parallax */
+        .parallax-1 h2 {
+            margin: auto;
+            position: relative;
+            border-radius: 50%;
+            left: 500x;
+            top: 300px;
+            width: 800px;
+            height: 280px;
+            padding: 40px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size:80px;
+        }
+
+        /* Styling the second parallax's 
+        height, width and background color */
+        .parallax-2 {
+            width: 100%;
+            height: 1200px;
+            background: url(Images/Epcot_MexicoAztec.jpeg);
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+  
+        /* Styling the title of second parallax */
+        
+  
+        /* Styling the content or paragraph */
+        .para-1 {
+            background-color: ivory;   
+        }
+
+        .para-1 p{
+            color: goldenrod;
+            padding: 5px;
+            font-size: 45px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .para-1-sub1{
+            background-color: cornflowerblue;
+            display: inline-table;
+            margin: 0px;
+            padding-top: 150px;
+            padding-bottom: 150px;
+            padding-left: 150px;
+            padding-right: 150px;
+            height: 500px;
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+
+        .column {
+            flex:33.33%;
+            padding:0px; 
+            border: solid goldenrod 10px;
+            position: relative;
+            text-align: center;
+        }
+       
+        .row{        
+            display: flex;
+        }
+
+        .top-left{
+            position:absolute;
+            color: white;
+            top: 16px;
+            left: 16px;
+            font-size: 30px;
+        }
+
+        .centered{
+            position: absolute;
+            color:white;
+            top:58px;
+            left: 16px;
+            font-size: 24px;
+            text-align: left;
+            margin-top: 30px;
+        }
+  
+        /* Styling the content or paragraph */
+        .para-2 {
+            text-align: center;
+            padding: 15px;
+            font-size: 17px;
+            font-family: Verdana;
+            background-color: black;
+            color: white;
+        }
+
+        .parallax-3{
+            width: 100%;
+            height: 1200px;
+            background: url(Images/Epcot_ball.jpeg);
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+  
+<body>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="https://disneyworld.disney.go.com/">Disney World: Orlando, FLorida</a>
+          <a href="https://disneyland.disney.go.com/">Disneyland: Anaheim, California</a>
+          <a href="https://www.disneylandparis.com/en-usd/">Disneyland: Paris, France</a>
+          <a href="https://www.tokyodisneyresort.jp/en/index.html">Disneyland and Disney Sea: Tokyo, Japan</a>
+          <a href="https://www.hongkongdisneyland.com/?located=true">Disneyland Resort: Hong Kong, China </a>
+          <a href="https://www.shanghaidisneyresort.com/en/">Disneyland Resort: Shanghai, China </a>
+        </div>
+      </div>
+
+    <nav class="navBar">
+        <ul class="nav_ul">
+            <span style="font-size:30px;cursor:pointer;color: white;" onclick="openNav()">&#9776;</span>
+            <li><a href="file:///Users/bryanparadise/IST144/parallexWebpage.html">Home</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Food and Wine Festival</a></li>
+            <li><a href="">International Flower and Garden Festival</a></li>
+            <li><a href="">Tickets</a></li>
+            <li><a href="">Shops</a></li>
+            <li><a href="">Hotel and Accomodations</a></li>
+            <li><a href="">Disney Photo Pass</a></li>
+        </ul>
+    </nav>
+  
+    <!-- Giving title of the first parallax -->
+    <div class="parallax-1">
+        <h2>Walt Disney World's 
+            EPCOT</h2>
+    </div>
+  
+    <!--Content of first parallax -->
+    <div class="para-1">
+        <p>
+            <b>Embarq on an exciting adventure 
+                <p>across the globe!</p></b>
+        </p>
+        <div class="para-1-sub1">
+            <div class="row">
+                <div class="column"><a href=""><img src="Images/Epcot_Drink.jpeg" alt="Error Loading Image" style="width: 100%; height: 100%;">
+                    <div class="top-left">International Festival of the Holiday</div><br>
+                    <div class="centered">Celebrate holiday traditions from around the world at the spirited seasonal event</div></a></div>
+                <div class="column"><a href=""><img src="Images/EPCOT_MickeyGarden.jpeg" alt="Error Loading Image" style="width: 100%; height: 100%;">
+                    <div class="top-left">International Flower and Garden Festival</div><br>
+                    <div class="centered">Attend an event abloom with brilliant gardens, fresh flavors, entertainment and more!</div></a></div>
+                <div class="column"><a href=""><img src="Images/Epcot_France.jpeg" alt="Error Loading Image" style="width: 100%; height: 100%;">
+                    <div class="top-left">International Festival of the Arts</div><br>
+                    <div class="centered">Be immersed in all things creative in this vibrant anual event</div></a></div>
+            </div>
+            
+        </div>
+        
+    </div>
+  
+    <!-- Giving title of the first parallax -->
+    <div class="parallax-2">
+    </div>
+  
+    <!--Content of first parallax -->
+    <div class="para-2">
+        <p>
+             
+        </p>
+    </div>
+  
+    <!--This will be same as first parallax-->
+    <div class="parallax-3">
+    </div>
+  
+    <div class="para-3">
+        <p>
+              
+        </p>
+    </div>
+
+    <script>
+        function openNav() {
+          document.getElementById("myNav").style.width = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+        </script>
+</body>
+  
+</html>

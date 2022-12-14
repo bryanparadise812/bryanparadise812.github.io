@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Photo Page</title>
+    <link rel="stylesheet" href="My_Photo_Page.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@482&family=PT+Sans+Narrow&display=swap">
+</head>
+<body>
+    <h1>Trips Around The World</h1>
+    <!--<h2>My Albums</h2>-->
+    <br>
+
+    <div class="image-container">
+        <img id="img-Box" src="Images/LosAngelos2.jpeg" alt="click here" height="400" width="600">
+    </div>
+
+    <br>
+
+    <ul id="locations">
+        <li class="locations_name"><a href="">Morroco</a></li>
+        <li class="locations_name"><a href="">Australia</a></li>
+        <li class="locations_name"><a href="">Hawaii</a></li>
+        <li class="locations_name"><a href="">Los Angelos</a></li>
+    </ul>
+
+    <div class="Albums">
+        <div class="albums_col1">
+            <img id="img" src="Images/morocco1.jpeg" alt="Click here"  onclick="myImageFunction(this)">
+            <img id="img" src="Images/Australia1.jpg" alt="Click here" onclick="myImageFunction(this)">
+            <img id="img" src="Images/Hawaii2.jpeg" alt="Click here" onclick="myImageFunction(this)">
+            <img id="img" src="Images/LosAngelos.jpeg" alt="Click here" onclick="myImageFunction(this)">
+        </div>
+    </div>
+
+    <script>
+        function myImageFunction(productSmallImg) {
+            var productFullImg = document.getElementById("img-Box");
+            productFullImg.src = productSmallImg.src;
+        }
+    </script>
+</body>
+</html>

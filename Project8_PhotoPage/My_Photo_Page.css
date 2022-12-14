@@ -1,0 +1,98 @@
+@import url(
+'https://fonts.googleapis.com/css2?family=Yaldevi:wght@200;300;400;500;600;700&display=swap');
+
+body{
+    background-image: url(Images/DelWaterGap.jpeg);
+    background-size: cover;
+    max-height: fit-content;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1{
+    font-family: 'Cinzel', serif;
+    font-size: 64px;
+    font-weight: 700;
+    text-align: center;
+    background-color: rgb(0,0,0,.4);
+    border: 5px solid rgb(0,0,0,.4);
+    box-shadow: 15px 15px 15px rgb(0,0,0,1);
+    text-shadow: 5px 5px 10px white;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+/*
+h2{
+    font-family: 'Cinzel', serif;
+    font-size: 48px;
+    color: black;
+    margin-left: 0px;
+    text-align: center;
+}*/
+
+#locations{
+    display: flex;
+}
+
+.locations_name{
+    list-style: none;
+    
+}
+
+.locations_name a{
+    font-size: 30px;
+    color: white;
+    text-shadow: 5px 5px black;
+    font-family: 'Cinzel', serif;
+    margin-left: 125px;
+    margin-right: 125px;
+}
+
+.Albums{
+    top: 45%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.albums_col1{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#img{
+    height: 300px;
+    width: 300px;
+    margin: 10px 0;
+    cursor: pointer;
+    display: block;
+    opacity: .8;
+    border: 5px solid white;
+    box-shadow: 5px 5px 10px white;
+}
+
+#img:hover{
+    opacity: 0.7;
+}
+
+.image-container img:hover{
+    transform: scale(2.0);
+    cursor: zoom-in;
+}
+
+.image-container {
+    align-items: center;
+    padding: 10px;
+    margin-left: 525px;
+}
+
+.image-container img {
+    height: 400px;
+    width:600px;
+    transition: transform 1s;
+    border: 2px solid white;
+    box-shadow: 10px 10px 10px black;
+}

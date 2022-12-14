@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Website</title>
+    <link rel="stylesheet" href="CreateAMusicWebsite.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;482&family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+<head>
+</head>
+ 
+<body>
+    <div class="container">
+        <ul class="nav">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ARTISTS</a></li>
+            <li><a href="#">MUSIC</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </div>
+ 
+    <div class="content">
+        <div class="left-col">
+            <h1><u>SAMPLE SOUNDS</u></h1>
+            <br>
+            <br>
+            <ol>
+            <li><img src="Images/Play.png" id="icon"> Bright Morning</li>
+            <li><img src="Images/Play.png" id="icon2"> Haunted House</li>
+            <li><img src="Images/Play.png" id="icon3"> Cat Meow</li>
+            <li><img src="Images/Play.png" id="icon4"> Buzzer</li>
+             </ol>   
+        </div>
+    </div>
+        <div class="content2">
+            <div class="right-col">    
+            <h1><u>SAMPLE VIDEOS</u></h1>
+            <br>
+            <ul>
+            <li><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6nnacTL5on2aVsRhVDNUSo?utm_source=generator" width="400" height="240" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></li>
+            <li><iframe width="400" height="230" src="https://www.youtube.com/embed/tgbNymZ7vqY"></li>
+            </iframe>
+            <br>
+            <li><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2f0P7iELCvAlV8j6Z3rGDE?utm_source=generator" width="400" height="240" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></li>
+             </ul>
+            </div>
+        </div>
+    </div>
+ 
+    <audio id="mysound">
+        <source src="Audio/mixaund-bright-morning.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="mysound2">
+        <source src="Audio/hauntedhouse.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="mysound3">
+        <source src="Audio/meow.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="mysound4">
+        <source src="Audio/Buzzer.mp3" type="audio/mp3">
+    </audio>
+ 
+    <script>
+        var mysound = document.getElementById("mysound");
+        var icon = document.getElementById("icon");
+ 
+        // Creating a function that will change
+        // pause to play and vice-versa
+        icon.onclick = function() {
+            if (mysound.paused) {
+ 
+                // If paused then play the
+                // music and change the image
+                mysound.play();
+                icon.src =
+"https://media.geeksforgeeks.org/wp-content/uploads/20210402235545/Pause.png";
+            } else {
+ 
+                // If playing then pause the
+                // music and change the image
+                mysound.pause();
+                icon.src =
+"https://media.geeksforgeeks.org/wp-content/uploads/20210402235520/play.png";
+            }
+        }
+
+        var mysound2 = document.getElementById("mysound2")
+        var icon2 = document.getElementById("icon2");
+ 
+        // Creating a function that will change
+        // pause to play and vice-versa
+        icon2.onclick = function() {
+            if (mysound2.paused) {
+ 
+                // If paused then play the
+                // music and change the image
+                mysound2.play();
+                icon2.src =
+"https://media.geeksforgeeks.org/wp-content/uploads/20210402235545/Pause.png";
+            } else {
+ 
+                // If playing then pause the
+                // music and change the image
+                mysound2.pause();
+                icon2.src =
+"https://media.geeksforgeeks.org/wp-content/uploads/20210402235520/play.png";
+            }
+        }
+
+        var mysound3 = document.getElementById("mysound3")
+        var icon3 = document.getElementById("icon3");
+ 
+        // Creating a function that will change
+        // pause to play and vice-versa
+        icon3.onclick = function() {
+            if (mysound3.paused) {
+ 
+                // If paused then play the
+                // music and change the image
+                mysound3.play();
+                icon3.src =
+"https://media.geeksforgeeks.org/wp-content/uploads/20210402235545/Pause.png";
+            } else {
+ 
+                // If playing then pause the
+                // music and change the image
+                mysound3.pause();
+                icon3.src =
+"https://media.geeksforgeeks.org/wp-content/uploads/20210402235520/play.png";
+            }
+        }
+
+        var mysound4 = document.getElementById("mysound4")
+        var icon4 = document.getElementById("icon4");
+ 
+        // Creating a function that will change
+        // pause to play and vice-versa
+        icon4.onclick = function() {
+            if (mysound4.paused) {
+ 
+                // If paused then play the
+                // music and change the image
+                mysound4.play();
+                icon4.src =
+"https://media.geeksforgeeks.org/wp-content/uploads/20210402235545/Pause.png";
+            } else {
+ 
+                // If playing then pause the
+                // music and change the image
+                mysound4.pause();
+                icon4.src =
+"https://media.geeksforgeeks.org/wp-content/uploads/20210402235520/play.png";
+            }
+        }
+    </script>
+</body>
+ 
+</html>

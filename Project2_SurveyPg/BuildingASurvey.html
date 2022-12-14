@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+        <script src="BuildingASurvey.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@482&family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="BuildingASurvey.css">
+    <title>
+        Build a Survey Form using HTML and CSS
+    </title>
+ 
+    <style>
+ 
+        /* Styling the Body element i.e. Color,
+        Font, Alignment */
+        body {
+            /*background-color: powderblue;*/
+            background-image: url(Images/Wedding.jpg);
+            background-size: cover;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        h1{
+            background-color: powderblue;
+        }
+ 
+        /* Styling the Form (Color, Padding, Shadow) */
+        form {
+            background-color: #fff;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        
+ 
+        /* Styling form-control Class */
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+ 
+        /* Styling form-control Label */
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+            font-family: courgette, sans-serif;
+        }
+ 
+        /* Styling form-control input,
+        select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+ 
+        /* Styling form-control Radio
+        button and Checkbox */
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"]
+        {
+            display: inline-block;
+            width: auto;
+            
+        }
+
+        .form-control input[id="alcoholServices-1"]
+        .form-control input[id="alcoholServices-2"]
+        .form-control input[id="alcoholServices-2"]
+        {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+ 
+        /* Styling Button */
+        button {
+            background-color: powderblue;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+  
+<body>
+    <h1>Wedding Planner Survey Form</h1>
+  
+    <!-- Create Form -->
+    <form id="form">
+ 
+        <!-- Details -->
+        <div class="form-control">
+            <label for="firstName" id="label-name">
+                First Name
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="firstName"
+                   placeholder="Enter your first name only" />
+            <br>
+            <label for="lastName" id="label-name">
+                   Last Name
+                </label>
+            <input type="text"
+                    id="lastName"
+                    placeholder="Enter your last name only" />
+        </div>
+  
+        <div class="form-control">
+            <label for="email" id="label-email">
+                Email
+            </label>
+ 
+            <!-- Input Type Email-->
+            <input type="email"
+                   id="email"
+                   placeholder="Enter your email" />
+        </div>
+  
+        <div class="form-control">
+            <label for="date" id="weddingDate">
+                Date of Wedding
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="date"
+                   placeholder="Enter the date of the Wedding" />
+        </div>
+  
+        <div class="form-control">
+            <label for="role" id="label-role">
+                Please indicate preferred venue type
+            </label>
+             
+            <!-- Dropdown options -->
+            <select name="role" id="role">
+                <option value="banquetHall">Banquet Hall</option>
+                <option value="barn">Barn</option>
+                <option value="beach">Beach</option>
+                <option value="garden">Garden</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label for="comment">
+                If you selected other, please indicate specific details about your preferred venue location.
+            </label>
+ 
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment"
+                placeholder="Enter your venue details here">
+            </textarea>
+        
+        </div>
+
+        <div class="form-control">
+            <label>
+                Number of guests attending
+                <input type="number" placeholder="Enter a number" name="num">
+            </label>
+        </div>
+        
+        <br>
+  
+        <div class="form-control">
+            <label>
+                What type of alchol service would you like?
+            </label>
+ 
+            <!-- Input Type Radio Button -->
+            <label for="alcoholService-1">
+                <input type="radio"
+                       id="alcoholService-1"
+                       name="alcohol">Cash Bar</input>
+            </label>
+            <label for="alcoholService-2">
+                <input type="radio"
+                       id="alcoholService-2"
+                       name="alcohol">Open Bar</input>
+            </label>
+            <label for="alcoholService-3">
+                <input type="radio"
+                       id="alcoholService-3"
+                       name="alcohol">None</input>
+            </label>
+        
+
+
+        <div class="form-control">
+            <label>What types of amenities
+                <small>(Check all that apply)</small>
+            </label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="inp">DJ</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="inp">Live Band</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="inp">Photographer</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="inp">Videographer</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="inp">Florist</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="inp">Wedding Favors</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Cocktail Hour Service</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Wedding Cake</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Valet Parking</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Coat Check</input></label>
+        </div>
+  
+        <div class="form-control">
+            <label for="comment">
+                Any comments or suggestions:
+            </label>
+ 
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment"
+                placeholder="Enter your comment here">
+            </textarea>
+        </div>
+  
+        <!-- Multi-line Text Input Control -->
+        <button type="submit" value="submit">
+            Submit
+        </button>
+    </form>
+</body>
+  
+</html>
