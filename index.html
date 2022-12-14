@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BC Portfolio</title>
+    <link rel="stylesheet" href="bcPortfolii.css">
+</head>
+<body>
+    <menu class="left-menu">
+        <div class="left-menu_top">
+        <a class="logo" href=""><img id="spoon" src="spoonTooBig.jpg" height="150px" width="150px"></a>
+        </div>
+        <hr style="color: white; width: 200px;">
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+            </div>
+        </div>
+
+        <nav class="navBar">
+            <ul class="nav_ul">
+                <span style="font-size:30px;cursor:pointer;color: whitesmoke; margin-left: 45%;" onclick="openNav()">&#9776;</span>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">Achievements</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <hr style="color: white; width: 200px;">
+        <br>
+        <br>
+        <h4 id="h4_sound">Sound</h4>
+          <input type="checkbox" id="switch"
+                    class="checkbox" />
+            <label for="switch" class="toggle">
+            <pre><p>OFF   ON</p></pre>
+            </label>
+
+            <audio id="mysound" loop>
+                <source src="beau-walker-amp-jurgance-smile-115461 copy.mp3" type="audio/mpeg">
+            </audio>
+    </menu>
+
+    <div class="parallax-overlay">
+        <div class="parallax-1">
+          <div class="h1_container"> 
+            <pre>
+                <h1 id="h1_home"> 
+               Hi, Im Bryan, 
+               Full Stack Developer
+                </h1>
+            </pre> 
+        </div>
+            <canvas id="canvas" style="cursor: pointer;"> 
+            </canvas> 
+        </div>
+    </div>
+
+    <div class="wheel">  
+        <div id="trib_img"><a href="file:///Users/bryanparadise/IST144/Project3_TributePg/tributePage.html"><img src="space_musk copy.jpeg" id="trib_img" class="card trib_img"></a></div>
+        <a href="file:///Users/bryanparadise/IST144/Project8_PhotoPage/My_Photo_Page.html"><img src="Hawaii2 copy.jpeg" id="photo_img" class="card"></a>
+        <a href="file:///Users/bryanparadise/IST144/Project6_EventPg/DesignAnEventPg.html"><img src="MusicShow_v2 copy.jpg" id="event_img" class="card"></a>
+        <a href="file:///Users/bryanparadise/IST144/Project5_Restaurant/WarrensideRestaurantPage.html"><img src="Warrenside_Tavern_Logo copy.jpeg" id="rest_img" class="card"></a>
+        <a href="file:///Users/bryanparadise/IST144/Project2_SurveyPg/BuildingASurvey.html"><img src="Wedding copy.jpg" id="survey_img" class="card"></a>
+        <a href="file:///Users/bryanparadise/IST144/Project4_ParallexPg/parallexWebpage.html"><img src="Epcot_ball copy.jpeg" id="para_img" class="card"></a>
+        <a href="file:///Users/bryanparadise/IST144/Project7_MusicStorePg/CreateAMusicWebsite.html"><img src="Music_background copy.jpg" id="music_img" class="card"></a>
+        <a href=""><img src="benjamin-basch-26p9YKkUZD4-unsplash copy.jpg" id="njwaves_img " class="card"></a>
+        <div id=""><h3 class="h3-projectWheel" id="h3-projectWheel">Projects</h3></div>
+    </div>
+
+    <div class="parallax-2">
+                <br><br><br><br>
+                <h1 class="h1_contact">Contact</h1>
+                <hr class="hr_contact">
+                <div class="contact-form">
+                    <form id="form">
+                        <ul>
+                            <li class="half animated fadeInUp"><input class="input_field inputfield_hov" placeholder="Name" type="text" name="name"><label class="input_label input_label_hov input-label_hov-color-2"></label></li>
+                            <li class="half animated fadeInUp"><input class="input_field inputfield_hov" placeholder="Email" type="email" name="email"><label class="input_label input_label_hov input-label_hov-color-2"></label></li>
+                            <li class="animated fadeInUp"><input class="input_field inputfield_hov" placeholder="Subject" type="text" name="subject"><label class="input_label input_label_hov input-label_hov-color-2"></label></li>
+                            <li class="animated fadeInUp"><textarea class="input_field inputfield_hov" placeholder="Message" name="msg"></textarea><label class="input_label input_label_hov input-label_hov-color-2"></label></li>
+                            <li class=""><button type="submit" value="submit">
+                                Submit
+                            </button>
+                        </ul>
+                    </form>
+                </div>
+    </div>
+    <script>
+        let theta = Math.PI / 4.0;
+        let new_theta = 0.0;
+        let new_x = 0.0;
+        let new_y = 0.0;
+        let wheel_radius = 200.00;
+        let wheel_theta = 0.0; 
+        const cards = document.querySelectorAll('.card');
+        const wheel = document.querySelector('.wheel');
+        const center = {
+            x: parseFloat(getComputedStyle(cards[0]).left),
+            y: parseFloat(getComputedStyle(cards[0]).top)
+        }
+
+        cards.forEach((card, index) => {
+            new_theta = theta * index;
+            new_x = (Math.cos(new_theta) * wheel_radius);
+            new_y = (-1.0 * Math.sin(new_theta) * wheel_radius);
+
+            card.style.left = `${center.x + new_x}px`;
+            card.style.top = `${center.y + new_y}px`;
+        });
+
+        document.addEventListener('wheel', event =>{
+            let scroll_speed = event.deltaY * 0.002;
+            wheel_theta = wheel_theta + scroll_speed;
+            wheel.style.transform = `translate(-50%, -50%) rotate(${wheel_theta * (180/Math.PI)}deg)`;
+        });
+        
+    </script>
+    <script src="bcPortfolioi.js"></script>
+
+</body>
+
+<script>
+
+        var mysound = document.getElementById("mysound");
+        var icon = document.getElementById("switch");
+    
+        // Creating a function that will change
+        // pause to play and vice-versa
+        icon.onclick = function() {
+            if (mysound.paused) {
+ 
+                // If paused then play the
+                // music and change the image
+                
+                mysound.play();
+                icon.src; 
+            } else {
+ 
+                // If playing then pause the
+                // music and change the image
+                mysound.pause();
+                icon.src;
+            }
+        }
+
+
+    function openNav() {
+      document.getElementById("myNav").style.width = "30%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+</script>
+
+</html>
