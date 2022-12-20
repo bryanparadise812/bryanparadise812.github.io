@@ -13,7 +13,7 @@ const mouse = {
 canvas.addEventListener('mousemove', function (event){
     mouse.x = event.x;
     mouse.y = event.y;
-    for(let i = 0; i < 3; i++){
+    for(let i = 0; i < 5; i++){
         spots.push(new Particle());
     }
 });
