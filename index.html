@@ -29,10 +29,20 @@
             <ul class="nav_ul">
                 <span style="font-size:30px;cursor:pointer;color: whitesmoke; margin-left: 45%;" onclick="openNav()">&#9776;</span>
                 <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Achievements</a></li>
-                <li><a href="">Contact</a></li>
+                <li class="dropdown"><a href="" class="dropbtn">Projects</a>
+                    <div class="dropdown-content">
+                        <a href="file:///Users/bryanparadise/IST144/Project3_TributePg/tributePage.html">Tribute Page</a>
+                        <a href="file:///Users/bryanparadise/IST144/Project8_PhotoPage/My_Photo_Page.html"> Photo Page</a>
+                        <a href="file:///Users/bryanparadise/IST144/Project6_EventPg/DesignAnEventPg.html">Event Page</a>
+                        <a href="file:///Users/bryanparadise/IST144/Project5_Restaurant/WarrensideRestaurantPage.html">Restaurant Page</a>
+                        <a href="file:///Users/bryanparadise/IST144/Project2_SurveyPg/BuildingASurvey.html">Survey Page</a>
+                        <a href="file:///Users/bryanparadise/IST144/Project4_ParallexPg/parallexWebpage.html">Parallex Page</a>
+                        <a href="file:///Users/bryanparadise/IST144/Project7_MusicStorePg/CreateAMusicWebsite.html">Music Store Page</a>
+                        <a href="">NJ Waves App</a>
+                    </div></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <hr style="color: white; width: 200px;">
@@ -52,55 +62,151 @@
 
     <div class="parallax-overlay">
         <div class="parallax-1">
-          <div class="h1_container"> 
-            <pre>
-                <h1 id="h1_home"> 
-               Hi, Im Bryan, 
-               Full Stack Developer
-                </h1>
-            </pre> 
+                <pre>
+                <h1 id="h1_home">             Hi, Im Bryan,            
+     Full Stack Developer</h1>
+                </pre> 
+             
+            <canvas id="canvas" style="cursor: pointer;">  
         </div>
-            <canvas id="canvas" style="cursor: pointer;"> 
-            </canvas> 
-        </div>
-    </div>
-
+    
     <div class="wheel">  
-        <div id="trib_img"><a href="Project3_TributePg/tributePage.html"><img src="space_musk copy.jpeg" id="trib_img" class="card trib_img"></a></div>
-        <a href="Project8_PhotoPage/My_Photo_Page.html"><img src="Hawaii2 copy.jpeg" id="photo_img" class="card"></a>
-        <a href="Project6_EventPg/DesignAnEventPg.html"><img src="MusicShow_v2 copy.jpg" id="event_img" class="card"></a>
-        <a href="Project5_Restaurant/WarrensideRestaurantPage.html"><img src="Warrenside_Tavern_Logo copy.jpeg" id="rest_img" class="card"></a>
-        <a href="Project2_SurveyPg/BuildingASurvey.html"><img src="Wedding copy.jpg" id="survey_img" class="card"></a>
-        <a href="Project4_ParallexPg/parallexWebpage.html"><img src="Epcot_ball copy.jpeg" id="para_img" class="card"></a>
-        <a href="Project7_MusicStorePg/CreateAMusicWebsite.html"><img src="Music_background copy.jpg" id="music_img" class="card"></a>
+        <div id="trib_img"><a href="file:///Users/bryanparadise/IST144/Project3_TributePg/tributePage.html"><img src="space_musk copy.jpeg" id="trib_img" class="card trib_img"></a></div>
+        <a href="file:///Users/bryanparadise/IST144/Project8_PhotoPage/My_Photo_Page.html"><img src="Hawaii2 copy.jpeg" id="photo_img" class="card"></a>
+        <a href="file:///Users/bryanparadise/IST144/Project6_EventPg/DesignAnEventPg.html"><img src="MusicShow_v2 copy.jpg" id="event_img" class="card"></a>
+        <a href="file:///Users/bryanparadise/IST144/Project5_Restaurant/WarrensideRestaurantPage.html"><img src="Warrenside_Tavern_Logo copy.jpeg" id="rest_img" class="card"></a>
+        <a href="file:///Users/bryanparadise/IST144/Project2_SurveyPg/BuildingASurvey.html"><img src="Wedding copy.jpg" id="survey_img" class="card"></a>
+        <a href="file:///Users/bryanparadise/IST144/Project4_ParallexPg/parallexWebpage.html"><img src="Epcot_ball copy.jpeg" id="para_img" class="card"></a>
+        <a href="file:///Users/bryanparadise/IST144/Project7_MusicStorePg/CreateAMusicWebsite.html"><img src="Music_background copy.jpg" id="music_img" class="card"></a>
         <a href=""><img src="benjamin-basch-26p9YKkUZD4-unsplash copy.jpg" id="njwaves_img " class="card"></a>
         <div id=""><h3 class="h3-projectWheel" id="h3-projectWheel">Projects</h3></div>
     </div>
 
     <div class="parallax-2">
-                <br><br><br><br>
-                <h1 class="h1_contact">Contact</h1>
+                <h1 class="h1_about" id="about">About</h1>
+                <hr class="hr_about">
+                <div class="div_about">
+                    <p id="p-about">I am a Front End Developer and UI/UX Designer with three years of creating interactive pages and android applications. I love tackling new challenges and consistently expanding on my skills to create more dynamic content. When I'm not working, I enjoy traveling the world, playing games and creating music.</p>
+                </div>
+
+                <h1 class="h1_skills" id="skills">Skills</h1>
+                <hr class="hr_skills">
+                <div class="div_skills">
+                    <div class="skills_content">
+                        <div class="skills_img">
+                            <img src="html_img.png" alt="" height="30px" width="30px">
+                        </div>
+                        <div class="skills_txt">
+                            <p class="p_text">HTML</p>
+                        </div>
+                    </div>
+                    <div class="skills_content">
+                        <div class="skills_img">
+                            <img src="css_img.png" alt="" height="30px" width="30px">
+                        </div>
+                        <div class="skills_txt">
+                            <p class="p_text">CSS</p>
+                        </div>
+                    </div>
+                    <div class="skills_content">
+                        <div class="skills_img">
+                            <img src="sass_img.png" alt="" height="30px" width="30px">
+                        </div>
+                        <div class="skills_txt">
+                            <p class="p_text">SASS</p>
+                        </div>
+                    </div>
+                    <div class="skills_content">
+                        <div class="skills_img">
+                            <img src="bootstrap_img.png" alt="" height="30px" width="30px">
+                        </div>
+                        <div class="skills_txt">
+                            <p class="p_text">BOOTSTRAP</p>
+                        </div>
+                    </div>
+                    <div class="skills_content">
+                        <div class="skills_img">
+                            <img src="javascript_img.png" alt="" height="30px" width="30px">
+                        </div>
+                        <div class="skills_txt">
+                            <p class="p_text">JAVASCRIPT</p>
+                        </div>
+                    </div>
+                    <div class="skills_content">
+                        <div class="skills_img">
+                            <img src="react_img.png" alt="" height="30px" width="30px">
+                        </div>
+                        <div class="skills_txt">
+                            <p class="p_text">REACT</p>
+                        </div>
+                    </div>
+                    <div class="skills_content">
+                        <div class="skills_img">
+                            <img src="java_img.png" alt="" height="30px" width="30px">
+                        </div>
+                        <div class="skills_txt">
+                            <p class="p_text">JAVA</p>
+                        </div>
+                    </div>
+                    <div class="skills_content">
+                        <div class="skills_img">
+                            <img src="androidstudio_img.png" alt="" height="30px" width="30px">
+                        </div>
+                        <div class="skills_txt">
+                            <p class="p_text">ANDROID STUDIO</p>
+                        </div>
+                    </div>
+                    
+                    <div class="skills_content">
+                        <div class="skills_img">
+                            <img src="mongoDB_img.png" alt="" height="30px" width="30px">
+                        </div>
+                        <div class="skills_txt">
+                            <p class="p_text">MONGO-DB</p>
+                        </div>
+                    </div>
+                    <div class="skills_content">
+                        <div class="skills_img">
+                            <img src="github_img.png" alt="" height="30px" width="30px">
+                        </div>
+                        <div class="skills_txt">
+                            <p class="p_text">GITHUB</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h1 class="h1_contact" id="contact">Contact</h1>
                 <hr class="hr_contact">
+                <p id="p-contact">Have a question or would like to work together?</p>
                 <div class="contact-form">
                     <form id="form">
                         <ul>
-                            <li class="half animated fadeInUp"><input class="input_field inputfield_hov" placeholder="Name" type="text" name="name"><label class="input_label input_label_hov input-label_hov-color-2"></label></li>
-                            <li class="half animated fadeInUp"><input class="input_field inputfield_hov" placeholder="Email" type="email" name="email"><label class="input_label input_label_hov input-label_hov-color-2"></label></li>
-                            <li class="animated fadeInUp"><input class="input_field inputfield_hov" placeholder="Subject" type="text" name="subject"><label class="input_label input_label_hov input-label_hov-color-2"></label></li>
-                            <li class="animated fadeInUp"><textarea class="input_field inputfield_hov" placeholder="Message" name="msg"></textarea><label class="input_label input_label_hov input-label_hov-color-2"></label></li>
-                            <li class=""><button type="submit" value="submit">
-                                Submit
-                            </button>
+                                <li class="half animated fadeInUp">
+                                    <input class="input_field inputfield_hov" placeholder="Name:" type="text" name="name">
+                               <label class="input_label input_label_hov input-label_hov-color-2"></label></li>
+                                <li class="half animated fadeInUp">
+                                    <input class="input_field inputfield_hov" placeholder="Email" type="email" name="email">
+                                    <label class="input_label input_label_hov input-label_hov-color-2"></label></li>               
+                                <li class="animated fadeInUp">
+                                    <input class="input_field inputfield_hov" placeholder="Subject:" type="text" name="subject">
+                                    <label class="input_label input_label_hov input-label_hov-color-2"></label></li>
+                                <li class="animated fadeInUp"><textarea class="input_field inputfield_hov" placeholder="Message: " name="msg"></textarea>
+                                    <label class="input_label input_label_hov input-label_hov-color-2"></label></li>
+                                <li class=""><button type="submit" value="submit">Submit</button>
                         </ul>
+                        <br>
                     </form>
                 </div>
     </div>
+</canvas>
+</div>
     <script>
         let theta = Math.PI / 4.0;
         let new_theta = 0.0;
         let new_x = 0.0;
         let new_y = 0.0;
-        let wheel_radius = 200.00;
+        let wheel_radius = 250.00;
         let wheel_theta = 0.0; 
         const cards = document.querySelectorAll('.card');
         const wheel = document.querySelector('.wheel');
@@ -125,42 +231,45 @@
         });
         
     </script>
-    <script src="bcPortfolioi.js"></script>
-
-</body>
 
 <script>
 
-        var mysound = document.getElementById("mysound");
-        var icon = document.getElementById("switch");
-    
-        // Creating a function that will change
-        // pause to play and vice-versa
-        icon.onclick = function() {
-            if (mysound.paused) {
- 
-                // If paused then play the
-                // music and change the image
-                
-                mysound.play();
-                icon.src; 
-            } else {
- 
-                // If playing then pause the
-                // music and change the image
-                mysound.pause();
-                icon.src;
-            }
+    var mysound = document.getElementById("mysound");
+    var icon = document.getElementById("switch");
+
+    // Creating a function that will change
+    // pause to play and vice-versa
+    icon.onclick = function() {
+        if (mysound.paused) {
+
+            // If paused then play the
+            // music and change the image
+            
+            mysound.play();
+            icon.src; 
+        } else {
+
+            // If playing then pause the
+            // music and change the image
+            mysound.pause();
+            icon.src;
         }
+    }
 
 
-    function openNav() {
-      document.getElementById("myNav").style.width = "30%";
-    }
-    
-    function closeNav() {
-      document.getElementById("myNav").style.width = "0%";
-    }
+function openNav() {
+  document.getElementById("myNav").style.width = "30%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
 </script>
+
+<script src="bcPortfolioi.js"></script>
+
+</body>
+
+
 
 </html>
