@@ -420,7 +420,7 @@ p {
 }
 
 .skills_content:hover{
-    background-color: rgb(188, 188, 27);
+    background-color: rgb(171, 171, 162);
 }
 
 .skills_txt{
@@ -462,7 +462,7 @@ p {
 
 
 .hr_contact{
-    color: whitesmoke;
+    color: white;
     width: 15%;
     text-align: center;
     position: relative;
